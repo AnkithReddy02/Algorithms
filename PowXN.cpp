@@ -12,10 +12,10 @@ int PowCal(int x,int n)
         return x;
     }
     
-    if(n%2==1)
-    return PowCal(x,n/2) * PowCal(x,n/2+1);
+    if(n%2==0)
+    return PowCal(x*x,n/2);
     
-    return PowCal(x,n/2) * PowCal(x,n/2);
+    return PowCal(x*x,n/2) * x;
 }
 int main()
 {

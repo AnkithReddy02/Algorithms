@@ -1,7 +1,7 @@
 #define N 1005
     int sizex[N];
     int parent[N];
-    
+    // I hope this is fine
     int findset(int x)
     {
         if(parent[x]==x)
@@ -25,4 +25,9 @@
             sizex[x] += sizex[y];
             parent[y] = x;
         }
+    }
+
+    int main()
+    {
+        
     }

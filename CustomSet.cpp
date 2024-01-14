@@ -1,6 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 087b20b817ecf6c523722d0cdb4176341ee1aa2b
 #define pii pair<int, int>
 
 struct Compare {
@@ -26,4 +30,11 @@ int main() {
     s.insert({2, 4});
     
     print(s);
+<<<<<<< HEAD
+=======
+    
+    
+    
+    
+>>>>>>> 087b20b817ecf6c523722d0cdb4176341ee1aa2b
 }

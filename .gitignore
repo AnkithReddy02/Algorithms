@@ -1,4 +1,4 @@
 *.in
 *.exe
-*.out
+2024/*.out
 sample.cpp

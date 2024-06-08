@@ -5,7 +5,7 @@ using namespace std;
 
 /*
 
-Segment Tree for Min Queries.
+Segment Tree for **Min Queries**.
 
 Sample Input:
 
@@ -27,10 +27,12 @@ Sample Output:
 */
 class SegmentTree {
 private:
+    // Depending upon the use case, decide whether to use the reference to the array or not.
     vector<int> &arr;
     vector<int> tree;
 
     int queryUtil(int node, int nodeLeft, int nodeRight, int left, int right) {
+        // Base conditions vary according to the type of query. (min, max, etc.)
         if (left > right || nodeLeft > right || nodeRight < left)
             return INT_MAX;
 
@@ -43,6 +45,7 @@ private:
     }
 
     int updateUtil(int root, int index, int left, int right, int val) {
+        // Base conditions vary according to the type of query. (min, max, etc.)
         if (left > right)
             return INT_MAX;
 
@@ -66,11 +69,12 @@ public:
             size *= 2;
         }
         // size is the next power of two.
-        tree.resize(2 * size, INT_MAX);
+        tree.resize(2 * size, INT_MAX); // Initialization vary according to the type of query. (min, max, etc.)
         buildTree(0, 0, n - 1);
     }
 
     int buildTree(int root, int left, int right) {
+        // Base conditions vary according to the type of query. (min, max, etc.)
         if (left > right) {
             return INT_MAX;
         }
